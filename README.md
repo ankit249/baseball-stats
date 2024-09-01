@@ -1,3 +1,26 @@
+
+
+rm -rf baseball-stats-dashboard
+npm install -g firebase-tools
+npx create-react-app baseball-stats-dashboard
+cd baseball-stats-dashboard
+vi src/App.js
+npm run build
+npm install react-icons
+npm start
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+npx tailwindcss init -p
+vi tailwind.config.js (copy 3 lines)
+vi src/index.css (copy the index.css)
+vi src/App.js (the App)
+npm start
+git remote add origin https://github.com/ankit249/baseball-stats.git
+git push --force origin master
+git status
+npm start
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
