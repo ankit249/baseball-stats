@@ -40,6 +40,24 @@ const formatPhoneNumber = (phoneNumberString) => {
 const BaseballStatsDashboard = () => {
   const teams = [
     {
+      name: "Sorcerer Gold [14u]",
+      seasons: "Fall 2024",
+      jersey: "#48",
+      coach: "Mike Hamilton",
+      phone: "9255888657",
+      headerColor: "bg-blue-800",
+      stats: {
+        IP: 15.1,
+        ERA: 1.370,
+        Strikeouts: 18,
+        Record: "2-1",
+        Hits: 12,
+        RunsAllowed: 6,
+        EarnedRuns: 3,
+        BattersBB: 2,
+      }
+    },
+    {
       name: "Sorcerer Premiere 2010 [14u]",
       seasons: "Spring 2024, Summer 2024",
       jersey: "#48",
