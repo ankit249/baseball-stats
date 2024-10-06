@@ -1,4 +1,4 @@
-
+Instructions
 
 rm -rf baseball-stats-dashboard
 npm install -g firebase-tools
