@@ -1,0 +1,8 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<div id="qrcode"></div>
+<script>
+  var qr = qrcode(4, 'L');
+  qr.addData('https://www.recruitsheets.com/teams/105/athletes/1357');
+  qr.make();
+  document.getElementById('qrcode').innerHTML = qr.createImgTag();
+</script>
