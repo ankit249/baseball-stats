@@ -47,14 +47,14 @@ const BaseballStatsDashboard = () => {
       phone: "9255888657",
       headerColor: "bg-blue-800",
       stats: {
-        IP: 15.1,
-        ERA: 1.370,
-        Strikeouts: 18,
-        Record: "2-1",
-        Hits: 12,
-        RunsAllowed: 6,
-        EarnedRuns: 3,
-        BattersBB: 2,
+        IP: 29.1,
+        ERA: 1.670,
+        Strikeouts: 28,
+        Record: "3-2",
+        Hits: 22,
+        RunsAllowed: 12,
+        EarnedRuns: 7,
+        BattersBB: 7,
       }
     },
     {
