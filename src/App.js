@@ -151,7 +151,11 @@ const BaseballStatsDashboard = () => {
     <div className="p-4 bg-gray-100 min-h-screen">
       <div className="bg-gray-200 p-4 text-center">
         <h1 className="text-3xl font-bold">
-          <span><FaBaseballBall className="inline mr-1" />Anya Shah, Softball Pitcher</span>
+	  <span>
+	  <a href="https://linktr.ee/anya_shah_48" target="_blank" rel="noopener noreferrer">
+	    <FaBaseballBall className="inline mr-1" />Anya Shah, Softball Pitcher
+	  </a>
+          </span>
           <br />
           <span><FaGraduationCap className="inline mr-1" />Class of 2028</span>
         </h1>
@@ -182,4 +186,3 @@ const BaseballStatsDashboard = () => {
 };
 
 export default BaseballStatsDashboard;
-
