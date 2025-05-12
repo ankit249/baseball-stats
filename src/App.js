@@ -96,8 +96,8 @@ const BaseballStatsDashboard = () => {
     {
       name: "Cal Nuggets Woods [14u]",
       seasons: "Fall 2023",
-      coach: "",
-      phone: "",
+      coach: "Kris Caldwell",
+      phone: "4158584593",
       jersey: "#48",
       headerColor: "bg-yellow-500",
       stats: {
