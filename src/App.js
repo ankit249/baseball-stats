@@ -41,7 +41,7 @@ const BaseballStatsDashboard = () => {
   const teams = [
     {
       name: "Notre Dame San Jose [Highschool Varsity]",
-      seasons: "2028 Notre Dame Varsity Regents [Freshman]",
+      seasons: "Spring 2025 [Freshman]: Notre Dame Varsity Regents",
       jersey: "#7 (Captain)",
       coach: "Jose Contreas",
       phone: "6504921621",
