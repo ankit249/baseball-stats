@@ -58,7 +58,7 @@ const BaseballStatsDashboard = () => {
       }
     },
     {
-      name: "Sorcerer Gold [14u]",
+      name: "Sorcerer Gold Hamilton [14u]",
       seasons: "Fall 2024",
       jersey: "#48",
       coach: "Mike Hamilton",
