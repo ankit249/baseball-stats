@@ -40,6 +40,24 @@ const formatPhoneNumber = (phoneNumberString) => {
 const BaseballStatsDashboard = () => {
   const teams = [
     {
+      name: "Notre Dame San Jose [Highschool Varsity]",
+      seasons: "2028 Notredame Varsity Regents [Freshman]",
+      jersey: "#7 (Captain)",
+      coach: "Jose Contreas",
+      phone: "6504921621",
+      headerColor: "bg-indigo-800", // Navy blue color for Notre Dame
+      stats: {
+        IP: 86,
+        ERA: 1.47,
+        Strikeouts: 150,
+        Record: "11-2",
+        Hits: 67,
+        RunsAllowed: 32,
+        EarnedRuns: 18,
+        BattersBB: 6,
+      }
+    },
+    {
       name: "Sorcerer Gold [14u]",
       seasons: "Fall 2024",
       jersey: "#48",
