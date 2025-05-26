@@ -47,14 +47,14 @@ const BaseballStatsDashboard = () => {
       phone: "6504921621",
       headerColor: "bg-blue-400", // Light blue color for Notre Dame matching the provided image
       stats: {
-        IP: 86,
-        ERA: 1.47,
-        Strikeouts: 150,
-        Record: "11-2",
-        Hits: 67,
-        RunsAllowed: 32,
-        EarnedRuns: 18,
-        BattersBB: 6,
+        IP: 97,
+        ERA: 1.44,
+        Strikeouts: 168,
+        Record: "12-2",
+        Hits: 74,
+        RunsAllowed: 35,
+        EarnedRuns: 20,
+        BattersBB: 7,
       }
     },
     {
