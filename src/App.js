@@ -41,7 +41,7 @@ const BaseballStatsDashboard = () => {
   const teams = [
     {
       name: "Sorcerer Gold Hamilton [14u]",
-      seasons: "Summer 2024",
+      seasons: "Summer 2025",
       jersey: "#48",
       coach: "Mike Hamilton",
       phone: "9255888657",
