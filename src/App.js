@@ -40,6 +40,24 @@ const formatPhoneNumber = (phoneNumberString) => {
 const BaseballStatsDashboard = () => {
   const teams = [
     {
+      name: "Sorcerer Gold Hamilton [14u]",
+      seasons: "Summer 2024",
+      jersey: "#48",
+      coach: "Mike Hamilton",
+      phone: "9255888657",
+      headerColor: "bg-blue-800",
+      stats: {
+        IP: 53.0,
+        ERA: 2.812,
+        Strikeouts: 51,
+        Record: "6-3",
+        Hits: 73,
+        RunsAllowed: 40,
+        EarnedRuns: 24,
+        BattersBB: 9,
+      }
+    },
+    {
       name: "Notre Dame San Jose [Highschool Varsity]",
       seasons: "Spring 2025 [Freshman]: Notre Dame Varsity Regents",
       jersey: "#7 (Captain)",
