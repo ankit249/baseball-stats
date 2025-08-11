@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaPhone, FaTshirt, FaUsers, FaCalendarAlt, FaGraduationCap, FaBaseballBall } from 'react-icons/fa';
+import { FaPhone, FaTshirt, FaUsers, FaCalendarAlt, FaGraduationCap, FaBaseballBall, FaUniversity, FaStar } from 'react-icons/fa';
 import { GiWhistle } from 'react-icons/gi'; // Using a whistle icon as a proxy for referee/strikeout
 
 const StatCard = ({ title, value }) => (
-  <div className="bg-white p-4 rounded-lg shadow">
-    <h3 className="text-sm font-medium text-gray-500">
-      {title === 'Strikeouts' ? <span><GiWhistle className="inline mr-1" />{title}</span> : formatTitle(title)}
+  <div className="bg-gradient-to-br from-white to-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+    <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
+      {title === 'Strikeouts' ? <span><GiWhistle className="inline mr-1 text-blue-500" />{title}</span> : formatTitle(title)}
     </h3>
-    <p className="text-2xl font-bold mt-1">{value}</p>
+    <p className="text-3xl font-bold mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">{value}</p>
   </div>
 );
 
@@ -186,31 +186,43 @@ const BaseballStatsDashboard = () => {
   ];
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
-      <div className="bg-gray-200 p-4 text-center">
-        <h1 className="text-3xl font-bold">
-	  <span>
-	  <a href="https://linktr.ee/anya_shah_48" target="_blank" rel="noopener noreferrer">
-	    <FaBaseballBall className="inline mr-1" />Anya Shah, Softball Pitcher
-	  </a>
-          </span>
-          <br />
-          <span><FaGraduationCap className="inline mr-1" />Class of 2028</span>
-        </h1>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {teams.map((team, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className={`p-4 text-white ${team.headerColor}`}>
-              <h2 className="text-xl font-semibold"><FaUsers className="inline mr-2" />{team.name}</h2>
-              <p className="text-sm"><FaCalendarAlt className="inline mr-2" />{team.seasons}</p>
-              <p className="text-sm"><FaTshirt className="inline mr-2" />Jersey: {team.jersey}</p>
-              {team.coach && (
-                <p className="text-sm mt-1"><FaPhone className="inline mr-2" />Coach: {team.coach} {formatPhoneNumber(team.phone)}</p>
-              )}
+    <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen">
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-center rounded-xl shadow-2xl mb-8">
+        <div className="backdrop-blur-sm bg-white/10 rounded-lg p-6">
+          <h1 className="text-4xl font-bold text-white mb-4">
+            <span className="flex items-center justify-center mb-3">
+              <a href="https://linktr.ee/anya_shah_48" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors duration-300">
+                <FaBaseballBall className="inline mr-3 text-yellow-300" />Anya Shah, Softball Pitcher
+              </a>
+            </span>
+            <div className="text-2xl font-semibold text-yellow-200 mb-2 flex items-center justify-center">
+              <FaStar className="mr-2" />Lady Magic Munoz-Asia 16U
             </div>
-            <div className="p-4">
-              <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
+              <FaUniversity className="inline mr-2" />Archbishop Mitty HighSchool
+            </div>
+          </h1>
+          <div className="text-lg text-gray-100 mt-4">
+            <span><FaGraduationCap className="inline mr-2" />Class of 2028</span>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {teams.map((team, index) => (
+          <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+            <div className={`p-6 text-white ${team.headerColor} relative`}>
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20"></div>
+              <div className="relative z-10">
+                <h2 className="text-xl font-bold mb-2"><FaUsers className="inline mr-3 text-yellow-300" />{team.name}</h2>
+                <p className="text-sm opacity-90 mb-1"><FaCalendarAlt className="inline mr-2" />{team.seasons}</p>
+                <p className="text-sm opacity-90 mb-2"><FaTshirt className="inline mr-2" />Jersey: {team.jersey}</p>
+                {team.coach && (
+                  <p className="text-sm opacity-90"><FaPhone className="inline mr-2" />Coach: {team.coach} {formatPhoneNumber(team.phone)}</p>
+                )}
+              </div>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+              <div className="grid grid-cols-2 gap-4">
                 {Object.entries(team.stats).map(([stat, value]) => (
                   <StatCard key={stat} title={stat} value={value} />
                 ))}
