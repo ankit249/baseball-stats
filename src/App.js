@@ -206,6 +206,9 @@ const BaseballStatsDashboard = () => {
             <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
               <FaUniversity className="inline mr-2" aria-hidden="true" />Archbishop Mitty HighSchool [Sophomore Transfer]
             </div>
+            <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
+              <FaUniversity className="inline mr-2" aria-hidden="true" />Notre Dame HighSchool [Freshman]
+            </div>
           </h1>
           <div className="text-lg text-gray-100 mt-4">
             <span><FaGraduationCap className="inline mr-2" aria-hidden="true" />Class of 2028</span>
