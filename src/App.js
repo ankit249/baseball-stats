@@ -38,6 +38,10 @@ const formatPhoneNumber = (phoneNumberString) => {
 };
 
 const BaseballStatsDashboard = () => {
+  // Add document title for SEO
+  React.useEffect(() => {
+    document.title = "Anya Shah - Softball Pitcher | Archbishop Mitty | Lady Magic Munoz-Asia 16U | Class of 2028 Stats";
+  }, []);
   const teams = [
     {
       name: "Sorcerer Gold Hamilton [14u]",
@@ -187,37 +191,45 @@ const BaseballStatsDashboard = () => {
 
   return (
     <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen">
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-center rounded-xl shadow-2xl mb-8">
+      {/* SEO-optimized header section */}
+      <header className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-center rounded-xl shadow-2xl mb-8" role="banner">
         <div className="backdrop-blur-sm bg-white/10 rounded-lg p-6">
           <h1 className="text-4xl font-bold text-white mb-4">
             <span className="flex items-center justify-center mb-3">
-              <a href="https://linktr.ee/anya_shah_48" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors duration-300">
-                <FaBaseballBall className="inline mr-3 text-yellow-300" />Anya Shah, Softball Pitcher
+              <a href="https://linktr.ee/anya_shah_48" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors duration-300" aria-label="Visit Anya Shah's Linktree profile">
+                <FaBaseballBall className="inline mr-3 text-yellow-300" aria-hidden="true" />Anya Shah, Softball Pitcher
               </a>
             </span>
             <div className="text-2xl font-semibold text-yellow-200 mb-2 flex items-center justify-center">
-              <FaStar className="mr-2" />Lady Magic Munoz-Asia 16U
+              <FaStar className="mr-2" aria-hidden="true" />Lady Magic Munoz-Asia 16U
             </div>
             <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
-              <FaUniversity className="inline mr-2" />Archbishop Mitty HighSchool
+              <FaUniversity className="inline mr-2" aria-hidden="true" />Archbishop Mitty HighSchool
             </div>
           </h1>
           <div className="text-lg text-gray-100 mt-4">
-            <span><FaGraduationCap className="inline mr-2" />Class of 2028</span>
+            <span><FaGraduationCap className="inline mr-2" aria-hidden="true" />Class of 2028</span>
+          </div>
+          {/* SEO-friendly hidden content */}
+          <div className="sr-only">
+            <p>Elite softball pitcher Anya Shah from Archbishop Mitty High School, playing for Lady Magic Munoz-Asia 16U travel softball team. Complete statistics, achievements, and recruiting information for Class of 2028 student-athlete.</p>
           </div>
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      </header>
+      
+      {/* Main content section */}
+      <main role="main">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Team statistics and performance history">
         {teams.map((team, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <article key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100" itemScope itemType="https://schema.org/SportsTeam">
             <div className={`p-6 text-white ${team.headerColor} relative`}>
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20"></div>
               <div className="relative z-10">
-                <h2 className="text-xl font-bold mb-2"><FaUsers className="inline mr-3 text-yellow-300" />{team.name}</h2>
-                <p className="text-sm opacity-90 mb-1"><FaCalendarAlt className="inline mr-2" />{team.seasons}</p>
-                <p className="text-sm opacity-90 mb-2"><FaTshirt className="inline mr-2" />Jersey: {team.jersey}</p>
+                <h2 className="text-xl font-bold mb-2" itemProp="name"><FaUsers className="inline mr-3 text-yellow-300" aria-hidden="true" />{team.name}</h2>
+                <p className="text-sm opacity-90 mb-1"><FaCalendarAlt className="inline mr-2" aria-hidden="true" /><span itemProp="season">{team.seasons}</span></p>
+                <p className="text-sm opacity-90 mb-2"><FaTshirt className="inline mr-2" aria-hidden="true" />Jersey: <span itemProp="identifier">{team.jersey}</span></p>
                 {team.coach && (
-                  <p className="text-sm opacity-90"><FaPhone className="inline mr-2" />Coach: {team.coach} {formatPhoneNumber(team.phone)}</p>
+                  <p className="text-sm opacity-90"><FaPhone className="inline mr-2" aria-hidden="true" />Coach: <span itemProp="coach">{team.coach}</span> <span itemProp="telephone">{formatPhoneNumber(team.phone)}</span></p>
                 )}
               </div>
             </div>
@@ -228,9 +240,10 @@ const BaseballStatsDashboard = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </article>
         ))}
-      </div>
+        </section>
+      </main>
     </div>
   );
 };
