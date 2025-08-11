@@ -204,7 +204,7 @@ const BaseballStatsDashboard = () => {
               <FaStar className="mr-2" aria-hidden="true" />Lady Magic Munoz-Asia 16U
             </div>
             <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
-              <FaUniversity className="inline mr-2" aria-hidden="true" />Archbishop Mitty HighSchool
+              <FaUniversity className="inline mr-2" aria-hidden="true" />Archbishop Mitty HighSchool [Sophomore Transfer]
             </div>
           </h1>
           <div className="text-lg text-gray-100 mt-4">
