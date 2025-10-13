@@ -83,8 +83,6 @@ const BaseballStatsDashboard = () => {
       name: "Notre Dame San Jose Highschool Varsity",
       seasons: "Spring 2025 [Freshman]: Notre Dame Varsity Regents",
       jersey: "#7 (Varsity Captain)",
-      coach: "Jose Contreas",
-      phone: "6504921621",
       headerColor: "bg-blue-400", // Light blue color for Notre Dame matching the provided image
       stats: {
         IP: 97,
