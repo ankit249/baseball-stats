@@ -44,6 +44,24 @@ const BaseballStatsDashboard = () => {
   }, []);
   const teams = [
     {
+      name: "Lady Magic Munoz/Asia [16u]",
+      seasons: "Fall 2025",
+      jersey: "#48",
+      coach: "Larry Asia",
+      phone: "2094824506",
+      headerColor: "bg-[#8B2E23]",
+      stats: {
+        IP: 15,
+        ERA: 0.933,
+        Strikeouts: 12,
+        Record: "3-0",
+        Hits: 9,
+        RunsAllowed: 2,
+        EarnedRuns: 2,
+        BattersBB: 4,
+      }
+    },
+    {
       name: "Sorcerer Gold Hamilton [14u]",
       seasons: "Summer 2025",
       jersey: "#48",
