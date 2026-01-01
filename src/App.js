@@ -40,15 +40,15 @@ const formatPhoneNumber = (phoneNumberString) => {
 const BaseballStatsDashboard = () => {
   // Add document title for SEO
   React.useEffect(() => {
-    document.title = "Anya Shah - Softball Pitcher | Archbishop Mitty | Lady Magic Munoz-Asia 16U | Class of 2028 Stats";
+    document.title = "Anya Shah - Softball Pitcher | Archbishop Mitty | Lady Magic Munoz 16u | Class of 2028 Stats";
   }, []);
   const teams = [
     {
-      name: "Lady Magic Munoz/Asia [16u]",
+      name: "Lady Magic Munoz 16u",
       seasons: "Fall 2025",
       jersey: "#48",
-      coach: "Larry Asia",
-      phone: "2094824506",
+      coach: "Lindsey Ziegenhirt | Ernie Munoz",
+      phone: "",
       headerColor: "bg-[#8B2E23]",
       stats: {
         IP: 39,
@@ -217,7 +217,7 @@ const BaseballStatsDashboard = () => {
               </a>
             </span>
             <div className="text-2xl font-semibold text-yellow-200 mb-2 flex items-center justify-center">
-              <FaStar className="mr-2" aria-hidden="true" />Lady Magic Munoz-Asia 16U
+              <FaStar className="mr-2" aria-hidden="true" />Lady Magic Munoz 16u
             </div>
             <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
               <FaUniversity className="inline mr-2" aria-hidden="true" />Archbishop Mitty HighSchool [Sophomore Transfer]
@@ -231,7 +231,7 @@ const BaseballStatsDashboard = () => {
           </div>
           {/* SEO-friendly hidden content */}
           <div className="sr-only">
-            <p>Elite softball pitcher Anya Shah from Archbishop Mitty High School, playing for Lady Magic Munoz-Asia 16U travel softball team. Complete statistics, achievements, and recruiting information for Class of 2028 student-athlete.</p>
+            <p>Elite softball pitcher Anya Shah from Archbishop Mitty High School, playing for Lady Magic Munoz 16u travel softball team. Complete statistics, achievements, and recruiting information for Class of 2028 student-athlete.</p>
           </div>
         </div>
       </header>
