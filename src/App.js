@@ -45,6 +45,24 @@ const BaseballStatsDashboard = () => {
   const teams = [
     {
       name: "Lady Magic Munoz 16u",
+      seasons: "Summer 2026",
+      jersey: "#48",
+      coach: "Ernie Munoz | Joe Jaquez",
+      phone: "",
+      headerColor: "bg-[#8B2E23]",
+      stats: {
+        IP: 0,
+        ERA: 0.00,
+        Strikeouts: 0,
+        Record: "0-0",
+        Hits: 0,
+        RunsAllowed: 0,
+        EarnedRuns: 0,
+        BattersBB: 0,
+      }
+    },
+    {
+      name: "Lady Magic Munoz 16u",
       seasons: "Fall 2025",
       jersey: "#48",
       coach: "Larry Asia",
@@ -60,7 +78,7 @@ const BaseballStatsDashboard = () => {
         EarnedRuns: 19,
         BattersBB: 13,
       }
-    },
+    },    
     {
       name: "Sorcerer Gold Hamilton [14u]",
       seasons: "Summer 2025",
@@ -216,9 +234,9 @@ const BaseballStatsDashboard = () => {
                 <FaBaseballBall className="inline mr-3 text-yellow-300" aria-hidden="true" />Anya Shah, Softball Pitcher
               </a>
             </span>
-            <div className="text-2xl font-semibold text-yellow-200 mb-2 flex items-center justify-center">
+            <a href="https://www.ladymagicsoftball.org/copy-of-lady-magic-munoz-2" target="_blank" rel="noopener noreferrer" className="text-2xl font-semibold text-yellow-200 mb-2 flex items-center justify-center hover:text-yellow-300 transition-colors duration-300" aria-label="Visit Lady Magic Munoz 16u team page">
               <FaStar className="mr-2" aria-hidden="true" />Lady Magic Munoz 16u
-            </div>
+            </a>
             <div className="text-xl font-medium text-blue-100 flex items-center justify-center">
               <FaUniversity className="inline mr-2" aria-hidden="true" />Archbishop Mitty HighSchool [Sophomore Transfer]
             </div>
