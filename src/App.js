@@ -47,8 +47,8 @@ const BaseballStatsDashboard = () => {
       name: "Lady Magic Munoz 16u",
       seasons: "Fall 2025",
       jersey: "#48",
-      coach: "Lindsey Ziegenhirt | Ernie Munoz",
-      phone: "",
+      coach: "Larry Asia",
+      phone: "208-482-4506",
       headerColor: "bg-[#8B2E23]",
       stats: {
         IP: 39,
