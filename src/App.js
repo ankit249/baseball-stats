@@ -245,6 +245,34 @@ const BaseballStatsDashboard = () => {
 
       {/* Main content section */}
       <main role="main">
+        <section aria-labelledby="team-stats-heading" className="mb-8">
+          <h2 id="team-stats-heading" className="text-2xl font-bold mb-4 text-gray-800 flex items-center"><FaUsers className="inline mr-3 text-blue-600" aria-hidden="true" />Season-by-Season Team Statistics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Team statistics and performance history">
+          {teams.map((team, index) => (
+            <article key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100" itemScope itemType="https://schema.org/SportsTeam">
+              <div className={`p-6 text-white ${team.headerColor} relative`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold mb-2" itemProp="name"><FaUsers className="inline mr-3 text-yellow-300" aria-hidden="true" />{team.name}</h3>
+                  <p className="text-sm opacity-90 mb-1"><FaCalendarAlt className="inline mr-2" aria-hidden="true" /><span itemProp="season">{team.seasons}</span></p>
+                  <p className="text-sm opacity-90 mb-2"><FaTshirt className="inline mr-2" aria-hidden="true" />Jersey: <span itemProp="identifier">{team.jersey}</span></p>
+                  {team.coach && (
+                    <p className="text-sm opacity-90"><FaPhone className="inline mr-2" aria-hidden="true" />Coach: <span itemProp="coach">{team.coach}</span> <span itemProp="telephone">{formatPhoneNumber(team.phone)}</span></p>
+                  )}
+                </div>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                <div className="grid grid-cols-2 gap-4">
+                  {Object.entries(team.stats).map(([stat, value]) => (
+                    <StatCard key={stat} title={stat} value={value} />
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+          </div>
+        </section>
+
         <section aria-labelledby="player-info-heading" className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-gray-100" itemScope itemType="https://schema.org/Person">
           <h2 id="player-info-heading" className="text-2xl font-bold mb-4 text-gray-800 flex items-center"><FaIdCard className="inline mr-3 text-blue-600" aria-hidden="true" />Player Information</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 text-lg">
@@ -304,34 +332,6 @@ const BaseballStatsDashboard = () => {
           <p className="text-gray-700 text-lg leading-relaxed">
             Anya Shah is a Class of 2028 right-handed pitcher from Archbishop Mitty High School in California. She plays travel softball for Lady Magic Munoz 16U. Her pitching velocity includes a 63 MPH fastball, 61 MPH riseball, 58 MPH curveball, and 50 MPH changeup. She recently competed in the TCS Colorado tournaments, including the P5 Patriot Games 16U and Sparkler National Power Pool 16U.
           </p>
-        </section>
-
-        <section aria-labelledby="team-stats-heading" className="mb-8">
-          <h2 id="team-stats-heading" className="text-2xl font-bold mb-4 text-gray-800 flex items-center"><FaUsers className="inline mr-3 text-blue-600" aria-hidden="true" />Season-by-Season Team Statistics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Team statistics and performance history">
-          {teams.map((team, index) => (
-            <article key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100" itemScope itemType="https://schema.org/SportsTeam">
-              <div className={`p-6 text-white ${team.headerColor} relative`}>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20"></div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-2" itemProp="name"><FaUsers className="inline mr-3 text-yellow-300" aria-hidden="true" />{team.name}</h3>
-                  <p className="text-sm opacity-90 mb-1"><FaCalendarAlt className="inline mr-2" aria-hidden="true" /><span itemProp="season">{team.seasons}</span></p>
-                  <p className="text-sm opacity-90 mb-2"><FaTshirt className="inline mr-2" aria-hidden="true" />Jersey: <span itemProp="identifier">{team.jersey}</span></p>
-                  {team.coach && (
-                    <p className="text-sm opacity-90"><FaPhone className="inline mr-2" aria-hidden="true" />Coach: <span itemProp="coach">{team.coach}</span> <span itemProp="telephone">{formatPhoneNumber(team.phone)}</span></p>
-                  )}
-                </div>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(team.stats).map(([stat, value]) => (
-                    <StatCard key={stat} title={stat} value={value} />
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-          </div>
         </section>
       </main>
     </div>
